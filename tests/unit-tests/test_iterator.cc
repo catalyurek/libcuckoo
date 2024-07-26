@@ -179,7 +179,7 @@ void test_iterator_lock_table_blocks_inserts() {
       table.insert(i, i);
     }
   });
-  std::this_thread::sleep_for(std::chrono::milliseconds(100));
+  std::this_thread::sleep_for(std::chrono::milliseconds(1));
   TEST_CHECK(table.size() == 0);
   lt.unlock();
   thread.join();

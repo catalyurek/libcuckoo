@@ -427,7 +427,7 @@ void test_locked_table_equality() {
 template <typename Table> void check_all_locks_taken(Table &tbl) {
   auto &locks = libcuckoo::UnitTestInternalAccess::get_current_locks(tbl);
   for (auto &lock : locks) {
-    TEST_CHECK(!lock.try_lock());
+    TEST_CHECK(!lock.try_lock_x());
   }
 }
 

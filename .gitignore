@@ -1,2 +1,5 @@
 *.swp
 build/
+CMakeCache.txt
+cmake.check_cache
+.vscode
